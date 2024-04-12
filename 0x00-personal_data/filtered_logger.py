@@ -64,7 +64,9 @@ def get_logger() -> logging.Logger:
 
 
 def main() -> None:
-    """he function will obtain a database connection using get_db and retrieve all rows in the users table and display each row under a filtered format"""
+    """The function will obtain a database connection using get_db
+    and retrieve all rows in the users table and display each row
+    under a filtered format"""
     db = get_db()
     cursor = db.cursor()
     cursor.execute("SELECT * FROM users;")
