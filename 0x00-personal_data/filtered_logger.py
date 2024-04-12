@@ -28,8 +28,7 @@ PII_FIELDS: Tuple[str, ...] = ("name", "email", "password", "ssn", "phone")
 
 def get_db() -> mysql.connector.connection.MySQLConnection:
     """ Connection to MySQL environment """
-    db_connect: mysql.connector.connection.MySQLConnection
-    = mysql.connector.connect(
+    db_connect = mysql.connector.connect(
         user=os.getenv('PERSONAL_DATA_DB_USERNAME', 'root'),
         password=os.getenv('PERSONAL_DATA_DB_PASSWORD', ''),
         host=os.getenv('PERSONAL_DATA_DB_HOST', 'localhost'),
